@@ -88,7 +88,7 @@ a {
   transition: all 0.3s cubic-bezier(0.19, 1, 0.22, 1);
 }
 .nav-container a:nth-child(3){
-  font-size: 50px;
+  font-size: 2.3vw;
 }
 
 .nav-container--top-first {
@@ -322,6 +322,7 @@ a {
   border: 2px solid #03dac6;
   transition: all 0.5s ease;
   z-index: 10;
+  min-width: 760px;
 }
 .content:hover{
   border: 2px solid #ff0266;
@@ -362,7 +363,8 @@ a {
   position: absolute;
   bottom: 10px;
   
-  left: 600px;
+  left: 60%;
+  transform: translateX(-50%);
   transition: all 0.5s ease;
 }
 
@@ -547,6 +549,7 @@ a {
   left: 50%;
   top: 150px;
   transform: translateX(-50%);
+  animation: change2 4s linear infinite;
 }
 .contact_tel{
   width: 30vw;
@@ -557,6 +560,7 @@ a {
   left: 71%;
   top: -150px;
   transform: translateX(-50%);
+  animation: change2 4s linear infinite;
 }
 .contact_mail{
   width: 30vw;
@@ -567,6 +571,7 @@ a {
   left: 29%;
   top: -150px;
   transform: translateX(-50%);
+  animation: change2 4s linear infinite;
 }
 
 .contact p{
@@ -576,5 +581,17 @@ a {
 
 }
 .contact > div >p:nth-child(1){
-  color: #03e9f4;
+  animation: change 4s linear infinite;
+}
+
+@keyframes change {
+  0%{color: #03e9f4;}
+  50%{color: #ff0266;}
+  100%{color: #03e9f4;}
+}
+
+@keyframes change2 {
+  0%{border: 2px solid #ff0266;}
+  50%{border: 2px solid #03e9f4;}
+  100%{border: 2px solid #ff0266;}
 }
