@@ -24,6 +24,9 @@ body {
   text-align: center;
   padding: 0 2em;
 }
+.nav{
+  height: 200vh;
+}
 
 .nav h1,
 .slider h1 {
@@ -59,6 +62,8 @@ h3.span {
   font-weight: 300;
   color: #faebd7;
   z-index: 4;
+  position: absolute;
+  top: 450px;
 }
 span:hover {
   color: #ff0266;
@@ -81,6 +86,9 @@ a {
   background: #1e1f26;
   z-index: 10;
   transition: all 0.3s cubic-bezier(0.19, 1, 0.22, 1);
+}
+.nav-container a:nth-child(3){
+  font-size: 50px;
 }
 
 .nav-container--top-first {
@@ -246,24 +254,25 @@ a {
 }
 
 .con_mockup{
-  position: absolute; margin: 0 auto; width: 636px; height: 530px;
+  position: absolute; margin: 0 auto; width: 650px; height: 530px;
   background: url(img/Group1.png) no-repeat 0 0;
-  top: 500px; left: 1300px; z-index: 10;
+  top: 500px; left: 1200px; z-index: 10;
   
 }
 .con_mockup > .mock_pc{
   position: absolute; width: 395px; height: 225px; overflow: hidden;
-  top: 63px; left: 47px;
+  top: 62px; left: 72px;
 }
 .con_mockup > .mock_tab{
-  position: absolute; width: 230px; height: 280px; overflow: hidden;
-  top: 130px; right: 110px;
-  border: 20px solid #000;
+  position: absolute; width: 210px; height: 290px; overflow: hidden;
+  top: 120px; right: 95px;
+  border: 15px solid #000;
+  border-radius: 5px;
   z-index: 3;
 }
 .con_mockup > .mock_mob{
-  position: absolute; width: 83px; height: 123px; overflow: hidden;
-  top: 277px; right: 25px;
+  position: absolute; width: 83px; height: 124px; overflow: hidden;
+  top: 275px; right: 12px;
 }
 .mockup{
   position: absolute; 
@@ -295,14 +304,24 @@ a {
   100%{top: -100px}
 }
 
+#tab-NETFLIX .mock_mob .mob{
+  animation: scroll4 6s linear 1s infinite alternate;
+}
+
+@keyframes scroll4 {
+  0%{top: 0;}
+  100%{top: -30px}
+}
+
 .content{
   position: absolute;
   top: 400px;
   left: 100px;
-  width: 50vw;
-  height: 60vh;
+  width: 45vw;
+  height: 700px;
   border: 2px solid #03dac6;
   transition: all 0.5s ease;
+  z-index: 10;
 }
 .content:hover{
   border: 2px solid #ff0266;
@@ -341,20 +360,221 @@ a {
 
 .content .view{
   position: absolute;
-  bottom: 20px;
-  border: 1px solid #e8edf1;
-  padding: 10px;
-  left: 500px;
+  bottom: 10px;
+  
+  left: 600px;
   transition: all 0.5s ease;
 }
-.content .view a{
-  color: #e8edf1;
-  transition: all 0.5 ease;
+
+.nav_about{
+  position: relative;
+  width:100vw;
+  
+}
+.nav_about h1{
+  position: absolute;
+  top: 50px;
+  left: 200px;
 }
 
-.content .view:hover{
-  border: 1px solid #03dac6;
+.info_img{
+  position: absolute;
+  left: 200px;
+  top: 300px;
+  width: 400px;
+
 }
-.content .view:hover a{
+.info_in{
+  position: relative;
+  top: 300px;
+  left: 900px;
+}
+.info_in p{
+  position: absolute;
+  color: #fff;
+  font-size: 30px;
+  transition: all 0.5 ease;
+}
+.info_in p:nth-child(1){
+  
+}
+.info_in p:nth-child(2){
+  top: 100px;
+}
+.info_in p:nth-child(3){
+  top: 100px;
+  left: 300px;
+}
+.info_in p:nth-child(1):hover,
+.info_in p:nth-child(2):hover,
+.info_in p:nth-child(3):hover,
+.info_in p:nth-child(4):hover,
+.info_in p:nth-child(5):hover,
+.info_in p:nth-child(6):hover,
+.info_in p:nth-child(7):hover
+{
   color: #03dac6;
+}
+
+.info_in p:nth-child(4){
+  top: 300px;
+}
+.info_in p:nth-child(5){
+  top: 300px;
+  left: 300px;
+}
+.info_in p:nth-child(6){
+  top: 400px;
+}
+.info_in p:nth-child(7){
+  top: 400px;
+  left: 300px;
+}
+
+.view > a{
+  position: relative;
+  display: inline-block;
+  padding: 25px 30px;
+  margin: 40px 0;
+  color: #03e9f4;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: 0.5s;
+  letter-spacing: 4px;
+  overflow: hidden;
+  margin-right: 50px;
+ 
+}
+.view > a:hover{
+  background: #03e9f4;
+  color: #050801;
+  box-shadow: 0 0 5px #03e9f4,
+              0 0 25px #03e9f4,
+              0 0 50px #03e9f4,
+              0 0 200px #03e9f4;
+   -webkit-box-reflect:below 1px linear-gradient(transparent, #0005);
+}
+.view >a:nth-child(1){
+  filter: hue-rotate(270deg);
+}
+.view >a:nth-child(2){
+  filter: hue-rotate(110deg);
+}
+.view >a span{
+  position: absolute;
+  display: block;
+}
+.view >a span:nth-child(1){
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg,transparent,#03e9f4);
+  animation: animate1 1s linear infinite;
+}
+@keyframes animate1{
+  0%{
+      left: -100%;
+  }
+  50%,100%{
+      left: 100%;
+  }
+}
+.view >a span:nth-child(2){
+  top: -100%;
+  right: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(180deg,transparent,#03e9f4);
+  animation: animate2 1s linear infinite;
+  animation-delay: 0.25s;
+}
+@keyframes animate2{
+  0%{
+      top: -100%;
+  }
+  50%,100%{
+      top: 100%;
+  }
+}
+.view >a span:nth-child(3){
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(270deg,transparent,#03e9f4);
+  animation: animate3 1s linear infinite;
+  animation-delay: 0.50s;
+}
+@keyframes animate3{
+  0%{
+      right: -100%;
+  }
+  50%,100%{
+      right: 100%;
+  }
+}
+
+
+.view >a span:nth-child(4){
+  bottom: -100%;
+  left: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(360deg,transparent,#03e9f4);
+  animation: animate4 1s linear infinite;
+  animation-delay: 0.75s;
+}
+@keyframes animate4{
+  0%{
+      bottom: -100%;
+  }
+  50%,100%{
+      bottom: 100%;
+  }
+}
+
+.contact{
+  width: 100%;
+  position: relative;
+}
+.contact_git{
+  width: 70vw;
+  height: 15vh;
+  border-radius: 30px;
+  border: 2px solid #03e9f4;
+  position: absolute;
+  left: 50%;
+  top: 150px;
+  transform: translateX(-50%);
+}
+.contact_tel{
+  width: 30vw;
+  height: 15vh;
+  border-radius: 30px;
+  border: 2px solid #03e9f4;
+  position: absolute;
+  left: 71%;
+  top: -150px;
+  transform: translateX(-50%);
+}
+.contact_mail{
+  width: 30vw;
+  height: 15vh;
+  border-radius: 30px;
+  border: 2px solid #03e9f4;
+  position: absolute;
+  left: 29%;
+  top: -150px;
+  transform: translateX(-50%);
+}
+
+.contact p{
+  margin: 25px;
+  color: #e8edf1;
+  font-size: 30px;
+
+}
+.contact > div >p:nth-child(1){
+  color: #03e9f4;
 }
