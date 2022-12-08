@@ -289,8 +289,8 @@ a {
   z-index: 3;
 }
 .con_mockup > .mock_mob{
-  position: absolute; width: 400px; height: 241px; overflow: hidden;
-  top: 336px; left: 580px;
+  position: absolute; width: 300px; height: 241px; overflow: hidden;
+  top: 335px; left: 584px;
   z-index: 11;
 }
 .mockup{
@@ -315,7 +315,7 @@ a {
 }
 
 .mob{
-  width: 135px;
+  width: 131px;
   animation: scroll3 6s linear 1s infinite alternate;
   
 }
@@ -330,13 +330,31 @@ a {
 #tab-NETFLIX .mob{
   height: 242px;
   animation: none;
-
+  
   
 }
 
 @keyframes scroll4 {
   0%{top: 0;}
   100%{top: -30px}
+}
+
+#tab-KAKAO .con_mockup >img{
+  width: 300px;
+}
+#tab-KAKAO .mock_mob{
+  position: absolute; width: 203px; height: 362px; overflow: hidden;
+  top: 70px; left: 223px;
+  z-index: 11;
+}
+#tab-KAKAO .mock_mob > video{
+  z-index: 15;
+  width: 200px;
+  position: absolute;
+  height: 400px;
+  left: 0px;
+  top: -50px;
+ 
 }
 
 .content{
