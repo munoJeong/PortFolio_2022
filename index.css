@@ -383,44 +383,53 @@ a {
   font-size: 40px;
   left: 40px;
 }
-.content .t:nth-child(1){
-  top: 100px;
+.content p:nth-child(1){
+  top: 50px;
 }
-.content .t:nth-child(3){
-  top: 300px;
+.content p:nth-child(2){
+  top: 110px;
 }
-.content .t:nth-child(5){
-  top: 500px;
-}
-
-.content .c:nth-child(2){
+.content p:nth-child(3){
   top: 180px;
 }
-.content .c:nth-child(4){
+.content p:nth-child(4){
+  top: 300px;
+}
+.content p:nth-child(5){
   top: 380px;
 }
-.content .c:nth-child(6){
+.content p:nth-child(6){
+  top: 500px;
+}
+.content p:nth-child(7){
   top: 580px;
 }
+
+
+
 
 .content .view{
   position: absolute;
   bottom: 10px;
   
-  left: 75%;
+  left: 55%;
   transform: translateX(-50%);
   transition: all 0.5s ease;
 }
 
-.content .view:nth-last-child(1){
+#tab-SAMSUNG .content .view:nth-last-child(1){
   left: 55%;
   transform: translateX(-50%);
 }
-.content .view:nth-last-child(2){
+#tab-SAMSUNG .content .view:nth-last-child(2){
   left: 35%;
   transform: translateX(-50%);
 }
-.content .view:nth-last-child(3){
+#tab-SAMSUNG .content .view:nth-last-child(3){
+  left: 75%;
+  transform: translateX(-50%);
+}
+#tab-SAMSUNG .content .view:nth-last-child(4){
   left: 15%;
   transform: translateX(-50%);
 }
@@ -517,7 +526,7 @@ a {
 .view > a{
   position: relative;
   display: inline-block;
-  padding: 25px 30px;
+  padding: 15px 20px;
   margin: 40px 0;
   color: #03e9f4;
   text-decoration: none;
@@ -681,9 +690,7 @@ a {
   margin-top: 10px;
   
 }
-#header  span.head_right{
-  
-  
-  
-  float: right;
+#header:hover{
+
 }
+
